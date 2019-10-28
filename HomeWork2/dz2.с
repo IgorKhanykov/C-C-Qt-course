@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+
+   unsigned char ucx1= -1;
+   unsigned char ucx2= 254; 
+   
+   printf("CHAR OVERFLOW");
+   printf("uChar %c coded into %d\n", ucx1, ucx1); //-1 or 254
+   ucx1++;
+   printf("uChar %c coded into %d\n", ucx1, ucx1); //0 or 255
+   ucx1++;
+   printf("uChar %c coded into %d\n\n", ucx1, ucx1); // 1 or 256
+   
+   printf("uChar %c coded into %d\n", ucx2, ucx2); // 255 or-1
+   ucx2++;
+   printf("uChar %c coded into %d\n", ucx2, ucx2); // 256 or 0
+   ucx2++;
+   printf("uChar %c coded into %d\n", ucx2, ucx2); // 257 or 1
+   ucx2++;
+   printf("uChar %c coded into %d\n", ucx2, ucx2); // 258 or 2
+   return 0;
+}
